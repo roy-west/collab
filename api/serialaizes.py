@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Task
+from .models import News
 
 
-class TaskSerializes(serializers.ModelSerializer):
+class NewsSerializes(serializers.ModelSerializer):
     class Meta:
-        model = Task
+        model = News
         fields = '__all__'
