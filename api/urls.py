@@ -1,19 +1,19 @@
 from django.urls import path
 from .views import (
     my_api_view,
-    tasklist_view,
+    newslist_view,
     detail_list_view,
-    task_create_view,
-    task_update_view,
-    task_delete_view,
+    news_create_view,
+    news_update_view,
+    news_delete_view,
 )
 
 urlpatterns = [
     path('', my_api_view),
-    path('tasks/', tasklist_view),
-    path('tasks-detail/<int:id>/', detail_list_view),
-    path('task-create/', task_create_view),
-    path('task-update/<int:id>/', task_update_view),
-    path('task-delete/<int:id>/', task_delete_view),
+    path('news/', newslist_view),
+    path('news-detail/<int:id>/', detail_list_view),
+    path('news-create/', news_create_view),
+    path('news-update/<int:id>/', news_update_view),
+    path('news-delete/<int:id>/', news_delete_view),
 ]
 

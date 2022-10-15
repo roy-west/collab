@@ -30,7 +30,7 @@ def detail_list_view(request, id):
 
 @api_view(['POST'])
 def news_create_view(request):
-    serializer = NewsSerializes.get(data=request.data)
+    serializer = NewsSerializes(data=request.data)
     if serializer.is_valid():
         serializer.save()
     return Response({"Created": "Object is created"})
